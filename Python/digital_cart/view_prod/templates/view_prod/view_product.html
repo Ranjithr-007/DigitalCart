@@ -1,0 +1,28 @@
+
+{% extends 'temp/contact.html' %}
+{% block contact %}
+
+		<h3 align="center">VIEW PRODUCTS</h3>
+
+        <table align="center" class="table table-bordered table-hover table-striped" >
+
+	<tr>
+		<th>Products id</th>
+		<th>Products</th>
+		<th>Price</th>
+		<th>Description</th>
+		<th>Quantity</th>
+	</tr>
+    {% if objval %}
+         {% for ob in objval %}
+    <tr>
+        <td>{{ ob.p_id }}</td>
+        <td>{{ ob.name }}</td>
+        <td>{{ ob.description }}</td>
+        <td>{{ ob.price }}</td>
+        <td>{{ ob.quantity }}</td>
+    </tr>
+   {% endfor %}
+{% endif %}
+</table>
+{% endblock %}

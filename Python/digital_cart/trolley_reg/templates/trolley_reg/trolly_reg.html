@@ -1,0 +1,17 @@
+{% extends 'temp/contact.html' %}
+{% block contact %}
+	<form method="post">
+		<h3 align="center">TROLLEY REGISTRATION</h3>
+        {% csrf_token %}
+		<table align="center" width="300" height="200">
+			<tr>
+
+				<td>Trolley No</td>
+				<td><input type="text" name="num"></td>
+			</tr>
+<tr>
+				<td align="center" colspan="2"><input type="submit" name="ss" value="ADD"></td>
+			</tr>
+		</table>
+	</form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'temp/contact.html' %}
+{% block contact %}
+		<h1 align="center"> view complaint and give reply</h1>
+        <form method="post">
+            {% csrf_token %}
+		<table align="center" width="300">
+
+<tr>
+	<td>reply </td>
+	<td><input type="text" name="reply"></td>
+</tr>
+<tr>
+	<td align="center" colspan="2"><input type="submit" name="post" value="POST"></td>
+</tr>
+		</table>
+		
+	</form>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'temp/contact.html' %}
+{% block contact %}
+	<form method="POST">
+         {% csrf_token %}
+		<h3 align="center">STAFF REGISTRATION</h3>
+    <div class="form-group"><label>
+		 	 Staff</label> <select name="" size=""></select>
+    </div>
+		<table align="center" class="table table-bordered table-hover table-striped">
+			<tr>
+				<th>Username</th>
+				<td><input type="text" name="un"></td>
+			</tr>
+			<tr>
+
+			<th>Address</th>
+				<td><input type="text" name="add"></td>
+
+
+			</tr>
+			<tr>
+			<th>Gender</th>
+			<td><input type="radio" name="Gender" value="Male">Male
+
+                <input type="radio" name="Gender" value="Female">Female</td>
+		</tr>
+		<tr>
+			<th>Phone</th>
+			<td><input type="number" name="ph" maxlength="10"></td>
+		</tr>
+		<tr><th>Email</th>
+		<td> <input type="text" name="Email"></td>  
+		</tr>
+		<tr>   
+			<th>Password</th>
+			<td><input type="Password" name="pass"></td>
+		</tr>
+		<tr>
+				<td align="center" colspan="2"><input type="submit" name="ss" value="REGISTER"></td>
+			</tr>
+
+
+		</table>
+
+       {% endblock %}

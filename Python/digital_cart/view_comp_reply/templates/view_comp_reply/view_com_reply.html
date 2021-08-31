@@ -1,0 +1,34 @@
+{% extends 'temp/contact.html' %}
+{% block contact %}
+	
+		<h3 align="center"> VIEW COMPLAINT AND GIVE REPLY</h3>
+      <div class="form-group"><label>
+    com_reply</label> <select name="" size=""></select>
+    </div>
+		<table align="center" class="table table-bordered table-hover table-striped">
+			<tr>
+                <th>Complaint id</th>
+				<th>User id</th>
+				
+			<th>Complaint</th>
+				<th> Date</th>
+                <th></th>
+			</tr>
+            {% if objval %}
+            {% for ob in objval %}
+            <tr>
+                 <td>{{ ob.id }}</td>
+                <td>{{ ob.v_id }}</td>
+                <td>{{ ob.complaint }}</td>
+                <td>{{ ob.date }}</td>
+
+              <td><a href="{% url 'reply' cid=ob.id %}">reply</a> </td>
+            </tr>
+            {% endfor %}
+        {% endif %}
+
+		</table>
+		
+
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'temp/contact.html' %}
+{% block contact %}
+		<h3 align="center">VIEW FEEDBACK</h3>
+		 <div class="form-group"><label>
+		 	 Feedback</label> <select name="" size=""></select>
+    </div>
+<table align="center" class="table table-bordered table-hover table-striped">
+	<tr>
+		<th>User id</th>
+		<th>Feedback</th>
+		<th>Date</th>
+	</tr>
+    {% if objval %}
+        {% for ob in objval %}
+            <tr>
+		        <td>{{ ob.v_id }}</td>
+		        <td>{{ ob.feedback }}</td>
+		        <td>{{ ob.date }}</td>
+            </tr>
+        {% endfor %}
+    {% endif %}
+</table>
+{% endblock %}
